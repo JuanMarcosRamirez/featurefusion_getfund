@@ -18,7 +18,7 @@ close all;
 
 addpath(genpath('../sources/'));
 
-lambda1 = 0.001;
+lambda1 = 0.01;
 lambda2 = [0 1e-4 2e-4 5e-4];
 
 % Loading data
@@ -56,26 +56,27 @@ compression_ratio   = 0.25;
 
 %% Feature Fusion
 % Proposed feature fusion using the patterned architecture
-dictionary = 'dct2_dct1'; %3-D DCT
+dictionary = 'wav2_dct1'; %2D Wavelet + 1D DCT (for dyadic spatial dimensions only)
+% dictionary = 'dct2_dct1'; %3-D DCT
 alg_parameters.tol  = 1e-6;
 alg_parameters.prnt = 1;
 alg_parameters.mitr = 200;
 alg_parameters.rho  = 0.1;
 
 fusedFeatPatt1    = feature_fusion_direct(shot_patt_HS,shot_patt_MS,...
-    filter_pattHS,filter_pattMS,q,p,lambda1,lambda2(1),'dct2_dct1',alg_parameters)';
+    filter_pattHS,filter_pattMS,q,p,lambda1,lambda2(1),dictionary,alg_parameters)';
 fusedFeatPattImg1 = reshape(fusedFeatPatt1, [N1 N2 num_hs_filters]);
 
 fusedFeatPatt2    = feature_fusion_direct(shot_patt_HS,shot_patt_MS,...
-    filter_pattHS,filter_pattMS,q,p,lambda1,lambda2(2),'dct2_dct1',alg_parameters)';
+    filter_pattHS,filter_pattMS,q,p,lambda1,lambda2(2),dictionary,alg_parameters)';
 fusedFeatPattImg2 = reshape(fusedFeatPatt2, [N1 N2 num_hs_filters]);
 
 fusedFeatPatt3    = feature_fusion_direct(shot_patt_HS,shot_patt_MS,...
-    filter_pattHS,filter_pattMS,q,p,lambda1,lambda2(3),'dct2_dct1',alg_parameters)';
+    filter_pattHS,filter_pattMS,q,p,lambda1,lambda2(3),dictionary,alg_parameters)';
 fusedFeatPattImg3 = reshape(fusedFeatPatt3, [N1 N2 num_hs_filters]);
 
 fusedFeatPatt4    = feature_fusion_direct(shot_patt_HS,shot_patt_MS,...
-    filter_pattHS,filter_pattMS,q,p,lambda1,lambda2(4),'dct2_dct1',alg_parameters)';
+    filter_pattHS,filter_pattMS,q,p,lambda1,lambda2(4),dictionary,alg_parameters)';
 fusedFeatPattImg4 = reshape(fusedFeatPatt4, [N1 N2 num_hs_filters]);
 %% Display results
 band_set_ms1=[floor(2*L_MS/3) floor(L_MS/4) 1];

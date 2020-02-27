@@ -18,7 +18,7 @@ close all;
 
 addpath(genpath('../sources/'));
 
-lambda1 = 0.001;
+lambda1 = 0.01;
 lambda2 = [0 1e-4 2e-4 5e-4];
 
 % Loading data
@@ -56,14 +56,15 @@ compression_ratio   = 0.25;
 
 %% Feature Fusion
 % Proposed feature fusion using the patterned architecture
-dictionary = 'dct2_dct1'; %3-D DCT
+dictionary = 'wav2_dct1'; %2D Wavelet + 1D DCT (for dyadic spatial dimensions only)
+% dictionary = 'dct2_dct1'; %3-D DCT
 alg_parameters.tol  = 1e-6;
 alg_parameters.prnt = 1;
 alg_parameters.mitr = 200;
 alg_parameters.rho  = 0.1;
 
 fusedFeatPatt1    = feature_fusion_direct(shot_patt_HS,shot_patt_MS,...
-    filter_pattHS,filter_pattMS,q,p,lambda1,lambda2(1),'dct2_dct1',alg_parameters)';
+    filter_pattHS,filter_pattMS,q,p,lambda1,lambda2(1),dict,alg_parameters)';
 fusedFeatPattImg1 = reshape(fusedFeatPatt1, [N1 N2 num_hs_filters]);
 
 fusedFeatPatt2    = feature_fusion_direct(shot_patt_HS,shot_patt_MS,...
@@ -98,7 +99,6 @@ imshow(temp_show,[]);
 title('HR image');
 
 subplot(243);
-%temp_show=I_MS(:,:,band_set_ms1);temp_show=normColor(temp_show);
 imshow(I1,[]);
 title('MS image');
 
