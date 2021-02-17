@@ -5,3 +5,23 @@
 ## Abstract
 
 In the compressive spectral imaging (CSI) framework, different architectures have been proposed to recover high-resolution spectral images from compressive measurements. Since CSI architectures compactly capture the relevant information of the spectral image, various methods that extract classification features from compressive samples have been recently proposed. However, these techniques require a feature extraction procedure that reorders measurements using the information embedded in the coded aperture patterns. In this paper, a method that fuses features directly from dual-resolution compressive measurements is proposed for spectral image classification. More precisely, the fusion method is formulated as an inverse problem that estimates high-spatial-resolution and low-dimensional feature bands from compressive measurements. To this end, the decimation matrices that describe the compressive measurements as degraded versions of the fused features are mathematically modeled using the information embedded in the coded aperture patterns. Furthermore, we include both a sparsity-promoting and a total-variation (TV) regularization terms to the fusion problem in order to consider the correlations between neighbor pixels, and therefore, improve the accuracy of pixel-based classifiers. To solve the fusion problem, we describe an algorithm based on the accelerated variant of the alternating direction method of multipliers (accelerated-ADMM). Additionally, a classification approach that includes the developed fusion method and a multilayer neural network is introduced. Finally, the proposed approach is evaluated on three remote sensing spectral images and a set of compressive measurements captured in the laboratory. Extensive simulations show that the proposed classification approach outperforms other approaches under various performance metrics.
+
+### Platform
+
+* Windows 10.
+
+### License
+
+This code package is licensed under the GNU GENERAL PUBLIC LICENSE (version 3) - see the [LICENSE](LICENSE) file for details.
+
+### Contact
+
+[Juan Marcos Ramirez](juanmarcos.ramirez@ujrc.es)
+
+### Date
+
+February 15, 2021
+
+### Acknowledgements
+
+This work has received funding from the European Union’s Horizon 2020 research and innovation programme under the Marie Skłodowska-Curie grant agreement No 754382, GOT ENERGY TALENT. The content of this article does not reflect the official opinion of the European Union. Responsibility for the information and views expressed herein lies entirely with the authors.
