@@ -26,7 +26,7 @@ load('../data/Pavia_university_cropped.mat');
 Io = pavia_university_cropped;
 clear pavia_university_cropped;
 
-load('../Data/Pavia_university_gt.mat');
+load('../data/Pavia_university_gt.mat');
 ground_truth = pavia_university_gt;
 clear pavia_university_gt;
 
