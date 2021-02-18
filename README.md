@@ -26,6 +26,12 @@ To observe the labeling maps as the TV regularization parameter increases, run i
 
 ![Demo image](https://github.com/JuanMarcosRamirez/featurefusion_getfund/blob/master/images/class_lambda.png?raw=true "Demo image")
 
+To observe the labeling performance for the different supervised classifiers, run in MATLAB:
+
+	>> classifier_testing
+
+![Demo image](https://github.com/JuanMarcosRamirez/featurefusion_getfund/blob/master/images/variousclassifiers.png?raw=true "Demo image")
+
 ### Platform
 
 * Windows 10.
