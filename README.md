@@ -42,6 +42,10 @@ To observe the labeling performance for the different supervised classifiers, ru
 
 This code package is licensed under the GNU GENERAL PUBLIC LICENSE (version 3) - see the [LICENSE](LICENSE) file for details.
 
+### Author
+
+* Juan Marcos Ramírez Rondón. GET-Cofund MSCA Postdoctoral Fellow. Computer Science Department. [Universidad Rey Juan Carlos](http://www.urjc.es). Móstoles, 28938, Spain. 
+
 ### Contact
 
 [Juan Marcos Ramirez](juanmarcos.ramirez@ujrc.es)
