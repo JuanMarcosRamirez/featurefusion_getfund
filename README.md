@@ -14,6 +14,11 @@ Download and uncompress the `featurefusion_getfund` folder. To generate Figures 
 
 #### Demo for Pavia University cropped image
 
+To observe the feature bands as the TV regularization parameter increases, run in MATLAB:
+
+	>> feature_maps_lambda
+
+
 
 ### Platform
 
