@@ -20,6 +20,12 @@ To observe the feature bands as the TV regularization parameter increases, run i
 
 ![Demo image](https://github.com/JuanMarcosRamirez/featurefusion_getfund/blob/master/images/feature_maps.png?raw=true "Demo image")
 
+To observe the labeling maps as the TV regularization parameter increases, run in MATLAB:
+
+	>> classification_maps_lambda
+
+![Demo image](https://github.com/JuanMarcosRamirez/featurefusion_getfund/blob/master/images/class_lambda.png?raw=true "Demo image")
+
 ### Platform
 
 * Windows 10.
