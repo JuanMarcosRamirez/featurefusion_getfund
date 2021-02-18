@@ -34,7 +34,9 @@ To observe the labeling performance for the different supervised classifiers, ru
 
 ### Platform
 
-* Windows 10.
+* Windows 10 OS, MATLAB R2018a. 
+
+* Ubuntu 18.04 OS, MATLAB R2020a.
 
 ### License
 
