@@ -10,7 +10,7 @@ In the compressive spectral imaging (CSI) framework, different architectures hav
 
 ### How to run the code
 
-Download and uncompress the `featurefusion_getfund` folder. To generate Figures and Tables in the paper, under **MATLAB** environment, navigate to the `featurefusion_getfund/pavia_university` folder and follow the instructions described below
+Download and uncompress the `featurefusion_getfund` folder. To run the demo under **MATLAB** environment, navigate to the `featurefusion_getfund/pavia_university` folder and follow the instructions described below
 
 #### Demo for Pavia University cropped image
 
